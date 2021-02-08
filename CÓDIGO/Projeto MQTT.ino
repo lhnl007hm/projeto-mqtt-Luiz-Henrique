@@ -1,7 +1,6 @@
 #include <PubSubClient.h>
 #include <UIPEthernet.h>
 #include <utility/logging.h>
-
 #include <SPI.h>
 
 
