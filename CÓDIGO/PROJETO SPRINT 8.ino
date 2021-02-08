@@ -44,7 +44,7 @@ void setup() {
 
     //Exibe uma linha em branco
     Serial.println("");
-    delay(5000);
+    //delay(5000);
 }
 
 void loop() {
@@ -58,18 +58,18 @@ void loop() {
 
     mqttClient.publish("luizh-t","O rack esta aberto");
     Serial.println(estado_sensor);
-    delay(1000);
+    //delay(1000);
   
     }else{
 
     mqttClient.publish("luizh-t","O rack esta fechado");
     Serial.println(estado_sensor);
-    delay(1000);
+    //delay(1000);
 
   }
 
   mqttClient.loop();
 
-  delay(500);
+  //delay(500);
     
 }
