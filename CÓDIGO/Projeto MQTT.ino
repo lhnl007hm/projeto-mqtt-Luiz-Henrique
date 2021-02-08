@@ -28,7 +28,7 @@ void setup() {
     //Inicia o monitor Serial
     Serial.begin(9600);
 
-    mqttClient.setServer("54.174.235.157",1883);
+    mqttClient.setServer("ip do servidor",1883);
 
     //Exibe no Monitor Serial as informações sobre o IP do Arduino
     Serial.print("O IP do Arduino e: ");
@@ -44,32 +44,32 @@ void setup() {
 
     //Exibe uma linha em branco
     Serial.println("");
-    //delay(5000);
+    delay(5000);
 }
 
 void loop() {
 
   estado_sensor = digitalRead(pino2);
 
-  mqttClient.connect("luizh");
+  mqttClient.connect("nome");
   
-
+ //logica booleana para informar o estado da porta
   if(estado_sensor == 1){
 
-    mqttClient.publish("luizh-t","O rack esta aberto");
+    mqttClient.publish("topico","mensagem");
     Serial.println(estado_sensor);
-    //delay(1000);
+    delay(1000);
   
     }else{
 
-    mqttClient.publish("luizh-t","O rack esta fechado");
+    mqttClient.publish("topico","mensagem");
     Serial.println(estado_sensor);
-    //delay(1000);
+    delay(1000);
 
   }
 
   mqttClient.loop();
 
-  //delay(500);
+  delay(500);
     
 }
