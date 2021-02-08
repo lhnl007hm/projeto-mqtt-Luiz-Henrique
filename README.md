@@ -1,4 +1,4 @@
-# Entregável Sprint 8
+# Projeto MQTT
 
 # Objetivo
 
